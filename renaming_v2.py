@@ -27,5 +27,3 @@ for filename in os.listdir(way): #читаем имена файлов
         os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)# переименовываем файл
         print(filename)
         print(new_name)
-    else:
-        break
