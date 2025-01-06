@@ -1,11 +1,6 @@
 import os # библиотека для работы с системой
-with open("prefixsis.txt", mode="r") as f:
-    s = f.readlines()
 
-prefixsis = []
 kolvo = 0
-for i in s:
-    prefixsis.append(i.rstrip())
 
 way = f"H:\CD07"#путь до папки
 for filename in os.listdir(way): #читаем имена файлов
