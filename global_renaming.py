@@ -1,6 +1,7 @@
 import os # библиотека для работы с системой
-
+import time
 way = r"G:" #путь к папкам
+start = time.time()
 for dirname in os.listdir(way): #читаем имена папок
     kolvo = 0
     if dirname[0:2] == "CD":
@@ -26,3 +27,7 @@ for dirname in os.listdir(way): #читаем имена папок
             elif kolvo >= 100 and filename[0] != "0":
                 new_name = f"{new_way}\{kolvo}.{r}"  # новое имя файла вместе с путём к нему
                 os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
+finish = time.time()
+res = finish - start
+res_msec = res * 1000
+print("Time" res)
