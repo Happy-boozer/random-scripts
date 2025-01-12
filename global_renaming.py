@@ -30,4 +30,4 @@ for dirname in os.listdir(way): #читаем имена папок
 finish = time.time()
 res = finish - start
 res_msec = res * 1000
-print("Time" res)
+print("Time", res)
