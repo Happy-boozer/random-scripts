@@ -19,5 +19,5 @@ for filename in os.listdir(way): #читаем имена файлов
             new_name = f"{way}\{n}{kolvo}.{r}"
             os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
     elif kolvo >= 100 and filename[0] != "0":
-        new_name = f"G:\CD02\{kolvo}.{r}"# новое имя файла вместе с путём к нему
+        new_name = f"{way}\{kolvo}.{r}"# новое имя файла вместе с путём к нему
         os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)# переименовываем файл
