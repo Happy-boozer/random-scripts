@@ -1,6 +1,7 @@
 import os # библиотека для работы с системой
 
 way = r"G:" #путь к папкам
+def renaming(way):
 for dirname in os.listdir(way): #читаем имена папок
     kolvo = 0
     if dirname[0:2] == "CD":
@@ -26,3 +27,5 @@ for dirname in os.listdir(way): #читаем имена папок
             elif kolvo >= 100 and filename[0] != "0":
                 new_name = f"{new_way}\{kolvo}.{r}"  # новое имя файла вместе с путём к нему
                 os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
+                
+renaming(way)
