@@ -8,7 +8,6 @@ for dirname in os.listdir(way): #читаем имена папок
         new_way += dirname #приклеиваем имя папки
         for filename in os.listdir(new_way):
             # считываем имена файлов внутри папки
-             #считаем количество фалов внутри папки
             files.append(filename[0:3])
 
         files = sorted(files)
