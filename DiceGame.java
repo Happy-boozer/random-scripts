@@ -34,7 +34,10 @@ public class DiceGame {
     }
 
     public static void main(String[] args) throws IOException {
-        int num = 3;
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ведите количество игроков");
+        int num = 0;
+        num = scanner.nextInt();
         DiceGame game = new DiceGame();
         game.Game(num);
     }
