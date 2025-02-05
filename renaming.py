@@ -14,6 +14,5 @@ def renaming(way):
 
         new_name = f"G:\фильмы\Supernatural_S_1_S_4_2005_2009_DVDRip_HDTVRip\Supernatural 2-LostFilm.TV\{filename[17:19]}_серия.{r}"# новое имя файла вместе с путём к нему
         os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)# переименовываем файл
-    #print(filename)
-
+        
 renaming(way)
