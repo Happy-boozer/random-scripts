@@ -19,5 +19,4 @@ void task3_26() {
             cout << i << "\n";
         }
     }
-    //cout << kolo << "\n";
 }
