@@ -25,4 +25,3 @@ def renaming_series(way):
             seri = "_серия"
             new_name = f"{way}\{kolvo}{seri}.{r}"# новое имя файла вместе с путём к нему
             os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)# переименовываем файл
-    #print(filename)
