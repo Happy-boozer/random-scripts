@@ -24,7 +24,6 @@ def main(shader):
 #(x − a)² + (y − b)² = R²
 #x + y = 1 / a / b
 def shader(x, y):
-    # Ваш код здесь:
     r1 = int(((x * 2 - 1) ** 2 + (y * 2 - 1) ** 2))
     r2 = int(((x * 7 - 4.5) ** 2 + (y * 7 - 1.7) ** 2))
     angle = math.atan2(y - 0.6, x - 0.6)
