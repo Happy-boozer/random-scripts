@@ -15,12 +15,12 @@ for dirname in os.listdir(way): #читаем имена папок
 
             if kolvo < 100 and filename[0] != "0":
                 if kolvo < 10:
-                    nn = "00"
+                    nn = "00"#начальный кусок
                     new_name = f"{new_way}\{nn}{kolvo}.{r}"
                     os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
                 else:
                     new_name = new_way
-                    n = "0"
+                    n = "0"#начальный кусок
                     new_name = f"{new_way}\{n}{kolvo}.{r}"
                     os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
             elif kolvo >= 100 and filename[0] != "0":
