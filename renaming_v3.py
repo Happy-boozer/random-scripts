@@ -18,7 +18,7 @@ def main():
                 f = os.path.join(new_way, filename)  # соединяем имя файла и путь к нему
                 r = f[-3:]  # записываем расширение файла
 
-                if kolvo < 100 and filename[0] != "0":
+                if kolvo < 100 and filename[0].isdigit() is False:
                     #print(filename)
                     if kolvo < 10:
                         nn = "00"
@@ -30,7 +30,7 @@ def main():
                         new_name = f"{new_way}\{n}{kolvo}{filename}"
                         os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
 
-                elif kolvo >= 100 and filename[0] != "0":
+                elif kolvo >= 100 and filename[0].isdigit() is False:
                     new_name = f"{new_way}\{kolvo}{filename}"  # новое имя файла вместе с путём к нему
                     os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
 main()
