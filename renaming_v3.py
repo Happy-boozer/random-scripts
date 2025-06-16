@@ -9,7 +9,6 @@ def main():
     for dirname in os.listdir(way):  # читаем имена папок
         kolvo = 0
         if dirname[0:2] == "CD":
-            # print(dirname)
             new_way = way + "\\"  # создаём путь в которой будем считать файлы
             new_way += dirname  # приклеиваем имя папки
             for filename in os.listdir(new_way):
@@ -19,7 +18,6 @@ def main():
                 r = f[-3:]  # записываем расширение файла
 
                 if kolvo < 100 and filename[0].isdigit() is False:
-                    #print(filename)
                     if kolvo < 10:
                         nn = "00"
                         new_name = f"{new_way}\{nn}{kolvo}{filename}"
