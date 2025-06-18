@@ -3,7 +3,7 @@ import os  # библиотека для работы с системой
 
 way = r"L:"  # путь к папкам
 
-def main():
+def main(way):
 
 
     for dirname in os.listdir(way):  # читаем имена папок
@@ -31,4 +31,4 @@ def main():
                 elif kolvo >= 100 and filename[0].isdigit() is False:
                     new_name = f"{new_way}\{kolvo}{filename}"  # новое имя файла вместе с путём к нему
                     os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
-main()
+main(way)
