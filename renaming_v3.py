@@ -20,15 +20,15 @@ def main(way):
                 if kolvo < 100 and filename[0].isdigit() is False:
                     if kolvo < 10:
                         nn = "00"
-                        new_name = f"{new_way}\{nn}{kolvo}{filename}"
+                        new_name = f"{new_way}\{nn}{kolvo}_{filename}"
                         os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
                     else:
                         new_name = new_way
                         n = "0"
-                        new_name = f"{new_way}\{n}{kolvo}{filename}"
+                        new_name = f"{new_way}\{n}{kolvo}_{filename}"
                         os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
 
                 elif kolvo >= 100 and filename[0].isdigit() is False:
-                    new_name = f"{new_way}\{kolvo}{filename}"  # новое имя файла вместе с путём к нему
+                    new_name = f"{new_way}\{kolvo}_{filename}"  # новое имя файла вместе с путём к нему
                     os.rename(f, new_name, src_dir_fd=None, dst_dir_fd=None)  # переименовываем файл
 main(way)
