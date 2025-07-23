@@ -29,7 +29,7 @@ def main(folder_path):
             new_name = f"{file_count:03d}{ext}"  # Формат: 001.txt, 002.jpg и т. д.
         else:
             # Добавляем нумерацию в формате "001имя", "002имя"...
-            new_name = f"{file_count:03d}{name_without_digits}{ext}"
+            new_name = f"{file_count:03d}_{name_without_digits}{ext}"
 
         # Полный путь к новому имени
         new_file_path = os.path.join(folder_path, new_name)
